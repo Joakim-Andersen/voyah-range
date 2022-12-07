@@ -1,0 +1,49 @@
+#vrf-modus{}
+#vrf-modus-wrapper{
+	border: none;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	.modus-select-item{
+		display: grid;
+		grid-template-columns: 32px auto;
+		align-items: center;
+		// gap: 2px;
+		margin-bottom: 10px;
+	}
+	input[name="modus"] {
+		display: grid;
+		place-content: center;
+	
+		-webkit-appearance: none;
+		appearance: none;
+		background-color: transparent;
+		margin: 0;
+		font: inherit;
+		color: currentColor;
+		width: 24px;
+		height: 24px;
+		border: 1.5px solid #fff;
+		border-radius: 4px;
+		&::before{
+			content: "";
+			width: 14px;
+			height: 14px;
+			background-color: #0041A0;
+			border-radius: 4px;
+			transform: scale(0);
+			transition: 400ms transform ease-in-out;
+			box-shadow: inset 1em 1em #0041A0;
+		}
+		&:checked::before {
+			transform: scale(1);
+		}
+	}
+
+
+
+	.modus-select-item:has(input:checked) {
+		color: #0041A0;
+	}
+
+
+}

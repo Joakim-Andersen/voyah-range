@@ -1,0 +1,316 @@
+#vrf-inner {
+  max-width: 1290px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 20px;
+}
+@media screen and (max-width: 768px) {
+  #vrf-inner {
+    grid-template-columns: 1fr;
+    max-width: 550px;
+  }
+}
+
+#vrf-range-output {
+  border: 0.5px dotted gray;
+}
+
+#vrf-driving-profile {
+  border: 0.5px dotted gray;
+}
+
+#vrf-temperatur {
+  border: 0.5px dotted gray;
+}
+
+#vrf-hjul {
+  border: 0.5px dotted gray;
+}
+
+#vrf-modus {
+  border: 0.5px dotted gray;
+}
+
+#vrf #vrf-driving-profile {
+  position: relative;
+  width: 100%;
+}
+#vrf #vrf-driving-profile-range-wrapper {
+  position: relative;
+  width: 100%;
+  height: 98px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+}
+#vrf #vrf-driving-profile-inner {
+  position: relative;
+  padding-top: 20px;
+  display: flex;
+  width: 100%;
+}
+#vrf #vrf-driving-profile-inner > * {
+  box-sizing: border-box;
+  flex: 1 1 33%;
+  hyphens: auto;
+  text-align: center;
+}
+#vrf .drive-type {
+  width: 100%;
+}
+
+#vrf input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+}
+#vrf input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+#vrf input[type=range]:focus {
+  outline: none; /* Removes the blue border.*/
+}
+#vrf input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+#vrf #vrf-driving-profile {
+  /* Special styling for WebKit/Blink */
+  /* All the same stuff for Firefox */
+  /* All the same stuff for IE */
+}
+#vrf #vrf-driving-profile .drive-type {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#vrf #vrf-driving-profile input[type=range]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  height: 5px;
+}
+#vrf #vrf-driving-profile input[type=range]::-moz-range-track {
+  -moz-appearance: none;
+  height: 5px;
+}
+#vrf #vrf-driving-profile input[type=range]::-ms-track {
+  appearance: none;
+  height: 5px;
+}
+#vrf #vrf-driving-profile input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #fff;
+  height: 109px;
+  width: 4px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: -5px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  box-shadow: none; /* Add cool effects to your sliders! */
+}
+#vrf #vrf-driving-profile input[type=range]::-moz-range-thumb {
+  box-shadow: none;
+  border: 1px solid #fff;
+  height: 109px;
+  width: 4px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+#vrf #vrf-driving-profile input[type=range]::-ms-thumb {
+  box-shadow: none;
+  border: 1px solid #fff;
+  height: 109px;
+  width: 4px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+#vrf-temperatur {
+  /* Special styling for WebKit/Blink */
+  /* All the same stuff for Firefox */
+  /* All the same stuff for IE */
+}
+#vrf-temperatur #vrf-temperaturrange-wrapper {
+  position: relative;
+}
+#vrf-temperatur #range-temperatur {
+  position: relative;
+}
+#vrf-temperatur input[type=range]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  height: 5px;
+  background-color: transparent;
+}
+#vrf-temperatur input[type=range]::-moz-range-track {
+  -moz-appearance: none;
+  height: 5px;
+  background-color: transparent;
+}
+#vrf-temperatur input[type=range]::-ms-track {
+  appearance: none;
+  height: 5px;
+  background-color: transparent;
+}
+#vrf-temperatur input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  box-sizing: content-box;
+  height: 26px;
+  width: 4px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: -10px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  box-shadow: none; /* Add cool effects to your sliders! */
+}
+#vrf-temperatur input[type=range]::-moz-range-thumb {
+  box-shadow: none;
+  border: 5px solid transparent;
+  height: 26px;
+  width: 4px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+#vrf-temperatur input[type=range]::-ms-thumb {
+  box-shadow: none;
+  border: 5px solid transparent;
+  height: 26px;
+  width: 4px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+#vrf-temperatur .values {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 10px 0;
+}
+#vrf-temperatur .values .min-temp {
+  text-align: left;
+}
+#vrf-temperatur .values #curr-temp {
+  text-align: center;
+}
+#vrf-temperatur .values .max-temp {
+  text-align: right;
+}
+#vrf-temperatur .slider-track {
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  border-radius: 5px;
+}
+
+#vrf-hjul #vrf-hjul-wrapper {
+  display: flex;
+  gap: 30px;
+  border: none;
+}
+#vrf-hjul #vrf-hjul-wrapper input[name=felg] {
+  display: none;
+}
+#vrf-hjul #vrf-hjul-wrapper .wheel-select-item:has(input:checked) {
+  color: #0041A0;
+}
+#vrf-hjul #vrf-hjul-wrapper .wheel-select-item:has(input:checked) img {
+  opacity: 1;
+}
+#vrf-hjul #vrf-hjul-wrapper .wheel-select-item img {
+  opacity: 0.7;
+}
+#vrf-hjul #vrf-hjul-wrapper .wheel-select-item span {
+  display: block;
+  text-align: center;
+}
+
+#vrf-modus-wrapper {
+  border: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+#vrf-modus-wrapper .modus-select-item {
+  display: grid;
+  grid-template-columns: 32px auto;
+  align-items: center;
+  margin-bottom: 10px;
+}
+#vrf-modus-wrapper input[name=modus] {
+  display: grid;
+  place-content: center;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 24px;
+  height: 24px;
+  border: 1.5px solid #fff;
+  border-radius: 4px;
+}
+#vrf-modus-wrapper input[name=modus]::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background-color: #0041A0;
+  border-radius: 4px;
+  transform: scale(0);
+  transition: 400ms transform ease-in-out;
+  box-shadow: inset 1em 1em #0041A0;
+}
+#vrf-modus-wrapper input[name=modus]:checked::before {
+  transform: scale(1);
+}
+#vrf-modus-wrapper .modus-select-item:has(input:checked) {
+  color: #0041A0;
+}
+
+html {
+  color: #fff;
+  font-size: 1em;
+  line-height: 1.4;
+  background-color: #181818;
+}
+
+body {
+  padding-top: 100px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#vrf {
+  font-family: trasandina, sans-serif;
+}
+#vrf .subtitle {
+  margin-bottom: 25px;
+  font-weight: 600;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+#estimated-range {
+  font-size: 60px;
+  line-height: 67px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.sub-title-estimate {
+  font-size: 32px;
+  line-height: 37px;
+  font-weight: 100;
+  text-transform: uppercase;
+}

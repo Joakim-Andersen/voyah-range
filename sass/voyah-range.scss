@@ -1,0 +1,50 @@
+@use 'layout.scss';
+@use 'driving-profile.scss';
+@use 'input-range.scss';
+@use 'temperatur.scss';
+@use 'hjul.scss';
+@use 'modus.scss';
+
+
+html {
+	color: #fff;
+  font-size: 1em;
+  line-height: 1.4;
+  background-color: #181818;
+}
+body{
+  // padding: 100px;
+  padding-top: 100px;
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+#vrf{
+  font-family: trasandina, sans-serif;
+  .subtitle{
+    margin-bottom: 25px;
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+}
+
+#estimated-range{
+  font-size: 60px;
+  line-height: 67px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.sub-title-estimate{
+  font-size: 32px;
+  line-height: 37px;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+
+
+
+

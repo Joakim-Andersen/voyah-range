@@ -1,0 +1,44 @@
+#vrf{
+	// margin-left: calc( 50% - ( var(--global-vw, 100vw) / 2 ));
+    // margin-right: calc( 50% - ( var(--global-vw, 100vw) / 2 ));
+    // max-width: 100vw;
+    // width: var(--global-vw, 100vw);
+    // padding-left: 0;
+    // padding-right: 0;
+    // clear: both;
+	
+}
+
+#vrf-inner{
+	max-width: 1290px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 25px;
+	// border: .3px dotted gray;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 10px 20px;
+	@media screen and (max-width: 768px){
+		grid-template-columns: 1fr;
+		max-width: 550px;
+	}
+}
+
+
+#vrf-range-output{
+	border: .5px dotted gray;
+}
+
+#vrf-driving-profile{
+	border: .5px dotted gray;
+}
+#vrf-temperatur{
+	border: .5px dotted gray;
+}
+#vrf-hjul{
+	border: .5px dotted gray;
+}
+#vrf-modus{
+	border: .5px dotted gray;
+}

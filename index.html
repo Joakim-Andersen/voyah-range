@@ -2,94 +2,22 @@
 <html class="no-js" lang="">
 
 <head>
-  <meta charset="utf-8">
-
-  <link rel="stylesheet" href="css/main.css">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://use.typekit.net/qbl6etr.css">
+	<link rel="stylesheet" href="css/voyah-range.css">
 
 </head>
-
+<!-- name-prefix == vrf -->
 <body>
-  <div id="driving-profile">
-    <input class="drive-type" id="range1" type="range" name="profile1" min="0" value="33" max="100" />
-    <div id="driving-profile-inner">
-      <div id="town">By</div>
-      <div id="country">Landevei</div>
-      <div id="highway">Motorvei</div>
-    </div>
-    <input class="drive-type" id="range2" type="range" name="profile2" min="0" value="66" max="100" />
-  </div>
-   
-
-
- 
-  <script>
-    window.addEventListener( 'DOMContentLoaded', (event) => { 
-      const r1 = document.querySelector('#range1');
-      const r2 = document.querySelector('#range2');
-
-      const town = document.querySelector('#town');
-      const country = document.querySelector('#country');
-      const highway = document.querySelector('#highway');
-      
-      
-      let profile1 = 33.3;
-      let profile2 = 33.3;
-      let profile3 = 33.3;
-
-      let r1_max = 65;
-      let r2_min = 34;
-      r1.addEventListener('input', function(ev) { 
-        if (ev.target.value >= r1_max){
-          ev.target.value = r1_max;
-          ev.preventDefault();
-          return;
-        }
-        calculateProfileMath();
-      });
-      r1.addEventListener('change', function(ev) {
-        r2_min = ev.target.value;
-      });
-
-
-      r2.addEventListener('input', function(ev) { 
-        if (ev.target.value <= r2_min){
-          ev.target.value = r2_min;
-          ev.preventDefault();
-          return;
-        }
-        calculateProfileMath();
-        // console.log('r2: ' + r2.value);
-      });
-      r2.addEventListener('change', function(ev) {
-        r1_max = ev.target.value;
-      });
-
-      function calculateProfileMath(){
-        profile1 = r1.value;
-        profile2 = r2.value - r1.value;
-        profile3 = 100 - r2.value;
-
-        // console.log('p1: '+profile1);
-        // console.log('p2: '+profile2);
-        // console.log('p3: '+profile3);
-
-        // console.log(profile2);
-        // var t = town.style.flexBasis;
-        
-        town.style.width = profile1+'%';
-        country.style.width = profile2+'%';
-        highway.style.width = profile3+'%';
-
-        console.log('town: ' + profile1);
-        console.log('country: ' + profile2);
-        console.log('highway: ' + profile3);
-
-      }
-
-
-    });
- </script>
-
+	<script src="js/voyah-range.js"></script>
+	<script>
+		const strings = {
+			title : 'Estimert rekkevidde',
+			driveProfile : 'Kjøreprofil'
+		};
+		
+	</script>
+	<section id="vrf"></section>
 </body>
 
 </html>

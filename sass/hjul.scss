@@ -1,0 +1,25 @@
+#vrf-hjul
+#vrf-hjul-wrapper{
+	display: flex;
+	gap: 30px;
+	border: none;
+	
+	input[name="felg"] {
+		display: none;
+	}
+
+	.wheel-select-item:has(input:checked) {
+		color: #0041A0;
+	}
+	.wheel-select-item:has(input:checked) img{
+		opacity: 1;
+	}
+	.wheel-select-item img{
+		opacity: .7;
+	}
+	.wheel-select-item span{
+		display: block;
+		text-align: center;
+	}
+
+}
